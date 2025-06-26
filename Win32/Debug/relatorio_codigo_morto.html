@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8">
+<title>Relatório de Código Morto</title>
+<style>
+body { font-family: Arial; margin: 40px; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #ccc; padding: 8px; }
+th { background-color: #f2f2f2; }
+</style></head><body>
+<h1>⚠️ Relatório de Código Morto</h1>
+<table><tr><th>Unit</th><th>Linha</th><th>Símbolo</th></tr>
+<tr><td>Dao.Conexao.pas</td><td>37</td><td>const //mudar para detectar diretorio do app</td></tr>
+<tr><td>Interfaces.Clientes.pas</td><td>13</td><td>function ObterClientePorId(Id</td></tr>
+<tr><td>Interfaces.Clientes.pas</td><td>14</td><td>procedure SalvarCliente(Cliente</td></tr>
+<tr><td>Interfaces.Clientes.pas</td><td>15</td><td>procedure RemoverCliente(Cliente</td></tr>
+<tr><td>Dao.Conexao.pas</td><td>37</td><td>const //mudar para detectar diretorio do app</td></tr>
+<tr><td>Interfaces.Clientes.pas</td><td>13</td><td>function ObterClientePorId(Id</td></tr>
+<tr><td>Interfaces.Clientes.pas</td><td>14</td><td>procedure SalvarCliente(Cliente</td></tr>
+<tr><td>Interfaces.Clientes.pas</td><td>15</td><td>procedure RemoverCliente(Cliente</td></tr>
+</table>
+<h2>📊 Estatísticas por Unit</h2>
+<canvas id="graficoResumo" height="150"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById("graficoResumo").getContext("2d");
+new Chart(ctx, { type: "bar", data: { labels: [
+"Controller.Contatos.pas",
+"Controller.Fabricantes.pas",
+"DAO.Cadastro.Clientes.pas",
+"Dao.Conexao.pas",
+"DAO.ConexaoLicencas.pas",
+"uDM.pas",
+"Dao.Conexao.pas",
+"Funcoes.Seguranca.pas",
+"Interfaces.Clientes.pas",
+"UCadastroCategorias.pas",
+"UCadastroClientes.pas",
+"UCadastroFabricantes.pas",
+"UCadastroOrcamentos.pas",
+"UCadastroVeiculos.pas",
+"uDM.pas",
+"URegistrar.pas",
+"UCadastroOrcamentos.pas",
+"Controller.Contatos.pas",
+"Controller.Fabricantes.pas",
+"DAO.Cadastro.Clientes.pas",
+"Dao.Conexao.pas",
+"DAO.ConexaoLicencas.pas",
+"uDM.pas",
+"Dao.Conexao.pas",
+"Funcoes.Seguranca.pas",
+"Interfaces.Clientes.pas",
+"UCadastroCategorias.pas",
+"UCadastroClientes.pas",
+"UCadastroFabricantes.pas",
+"UCadastroOrcamentos.pas",
+"UCadastroVeiculos.pas",
+"uDM.pas",
+"URegistrar.pas",
+"UCadastroOrcamentos.pas",
+], datasets: [{ label: "Código Morto (%)", data: [
+0,
+0,
+0,
+0,
+0,
+0,
+100,00,
+0,
+100,00,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+100,00,
+0,
+100,00,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+], backgroundColor: "#e67e22" }] },
+options: { scales: { y: { beginAtZero: true, max: 100 } } } });
+</script>
+<p>Gerado em: 26/06/2025 13:46:19</p>
+</body></html>

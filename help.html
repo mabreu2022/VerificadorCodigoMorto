@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajuda – Verificador de Código Morto</title>
+  <style>
+    body { font-family: Arial; margin: 40px; line-height: 1.6; }
+    h1 { color: #333; }
+    code { background: #f2f2f2; padding: 2px 6px; border-radius: 4px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 1em; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f9f9f9; }
+  </style>
+</head>
+<body>
+  <h1>🛠️ Verificador de Código Morto – Ajuda</h1>
+
+  <p><strong>Uso básico:</strong></p>
+  <pre><code>VerificadorCodigoMorto.exe &lt;diretório&gt; [opções]</code></pre>
+
+  <table>
+    <tr><th>Parâmetro</th><th>Descrição</th></tr>
+    <tr><td><code>&lt;diretório&gt;</code></td><td>Diretório raiz para análise de arquivos <code>.pas</code>.</td></tr>
+    <tr><td><code>--only=a,b,...</code></td><td>Limita os tipos a analisar: <code>procedure</code>, <code>function</code>, <code>const</code>, etc.</td></tr>
+    <tr><td><code>--ignore=a,b,...</code></td><td>Ignora linhas com palavras específicas (ex: <code>private</code>).</td></tr>
+    <tr><td><code>--exclude=a,b,...</code></td><td>Ignora símbolos com nomes ou partes de nomes específicos.</td></tr>
+  </table>
+
+  <h2>📌 Exemplo</h2>
+  <p>
+    <code>VerificadorCodigoMorto.exe C:\Projetos\MinhaLib --only=function,class --ignore=protected --exclude=Init</code>
+  </p>
+
+  <p>Gera um relatório HTML detalhado com símbolos não utilizados.</p>
+
+  <footer style="margin-top: 3em; font-size: 0.9em; color: #777;">
+    Desenvolvido por Mauricio • Atualizado automaticamente pela ferramenta
+  </footer>
+</body>
+</html>
