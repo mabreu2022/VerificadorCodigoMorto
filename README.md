@@ -19,3 +19,54 @@ Utilitário console em Delphi para detectar funções e procedures não utilizad
 
 ```bash
 VerificadorCodigoMorto.exe <diretório> [opções]
+
+📁 Exemplo básico
+VerificadorCodigoMorto.exe .\src\
+
+
+
+⚙️ Opções disponíveis
+| Parâmetro | Exemplo | Descrição | 
+| --only= | --only=private,function | Analisa apenas tipos/visibilidades específicos | 
+| --ignore= | --ignore=public | Ignora símbolos com visibilidades específicas | 
+| --exclude= | --exclude=Test,Mock,On | Ignora nomes que contenham essas palavras | 
+
+
+Todos os filtros são opcionais e combináveis.
+
+
+🧪 Exemplo com filtros
+VerificadorCodigoMorto.exe .\source\ --only=private,function --ignore=public --exclude=On,Test,dm
+
+
+
+📝 Saída
+- Console mostra símbolos órfãos: unit, linha e nome
+- Gera o arquivo: relatorio_codigo_morto.html
+- Relatório HTML é aberto automaticamente se forem encontrados problemas
+- Código de saída 1 é retornado para falhar o build se desejado
+
+🤖 Uso com Jenkins
+bat 'VerificadorCodigoMorto.exe .\\source\\ > analise.log'
+
+script {
+    def log = readFile('analise.log')
+    if (log.contains("⚠️")) {
+        error('❌ Código morto detectado! Corrija os símbolos antes de continuar.')
+    }
+}
+
+
+
+📁 Arquivos gerados
+| Arquivo | Descrição | 
+| relatorio_codigo_morto.html | Relatório navegável com todos os símbolos não utilizados | 
+
+
+
+🧰 Requisitos
+- Delphi (qualquer versão com suporte a SysUtils, IOUtils, ShellAPI)
+- Arquivos .pas no diretório informado
+
+Feito com ❤️ para manter seu código limpo, saudável e sem fantasmas esquecidos na arquitetura.
+
